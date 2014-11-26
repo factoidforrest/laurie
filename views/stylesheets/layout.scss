@@ -5,7 +5,27 @@ body {
 	font-size: 14px;
 	line-height: 1.42857143;
 	color: #333;
-	background-color: #E7E7E5 !important;
+	background-color: #FDFDFC !important;
+	
 }
 
+.navbar {
+	//font-family: 'Helvetica';
+	background-color: white !important;
+}
+
+.content {
+	font-family: 'Raleway', sans-serif !important;
+	color: #808080;
+	//background-color:#FDFDFC;
+}
+
+.heading {
+	line-height: 35px;
+}
+
+.body-text {
+	line-height: 27px;
+	font-size: 16px;
+}
 //override default border and margins
