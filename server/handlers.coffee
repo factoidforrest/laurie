@@ -1,11 +1,15 @@
 ##sass = require('node-sass')
 ##fs = require('fs')
-aDay = 86400000;
-staticOpts = {maxAge: aDay}
+sendMail = require './mail'
 
-module.exports = {
-	root: (req, res) ->
-		section = req.param "section"
-		section ||= "main"
-		res.render('root.jade', {section: section})
-  }
+
+exports.root = (req, res) ->
+	section = req.param "section"
+	section ||= "main"
+	res.render('root.jade', {section: section})
+
+
+exports.contact = (req, res) ->
+  console.log(req.body)
+  sendMail(req.body, res)
+

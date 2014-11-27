@@ -7,14 +7,23 @@ requirejs.config
 
     # Load bootstrap from cdn. On fail, load local file. 
     bootstrap: [["//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min"], "libs/bootstrap-min"]
+    spin: ["./libs/ladda/spin.min"]
+    ladda: ["./libs/ladda/ladda.min"]
 
-  shim:
-    
-  # Set bootstrap dependencies (just jQuery) 
-    bootstrap: ["jquery"]
+  shim: {
+    bootstrap: ["jquery"],
+    "spin": {exports: "Spinner"}
+    "ladda": {
+      depends: "spin",
+      exports: "Ladda"
+    }
 
+  }
 require [
   "jquery"
+  "ladda"
   "bootstrap"
-], ($) -> 
-  console.log 'JS loaded'
+  "contact"
+], ($, Ladda) -> 
+  window.ladda = Ladda
+  console.log "JS loaded"
