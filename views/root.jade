@@ -11,7 +11,7 @@ html(lang="en")
 		script(data-main="main", src="libs/require.js")
 	body
 		include partials/nav.jade
-		//hopefully a cleaner way to do this
+		//probably better to do this as a loop
 		.content
 			if section === 'main'
 				include partials/tiles.jade
