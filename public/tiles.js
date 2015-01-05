@@ -3,8 +3,8 @@ define(["jquery"], function($, masonry) {
   container = $('.tiles');
   console.log(container.first());
   if (container.length > 0) {
-    return require(['masonry'], function(masonry) {
-      return $(window).load(function() {
+    return require(['masonry', 'libs/imagesloaded'], function(masonry, imagesLoaded) {
+      return imagesLoaded(container[0], function() {
         var msnry;
         console.log('Running Masonry');
         return msnry = new masonry(container[0], {
