@@ -18,3 +18,23 @@ body {
 .body-text {
   line-height: 27px;
   font-size: 16px; }
+
+.tile {
+  padding: 4px;
+  width: 25%;
+  display: block; }
+
+@media screen and (max-width: 700px) {
+  .tile {
+    padding: 4px;
+    width: 50%; } }
+
+/*
+video {
+	width:100%;
+	border-radius: 5px;
+}
+*/
+.tiles {
+  padding-right: 0px !important;
+  padding-left: 0px !important; }
